@@ -1,0 +1,52 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  background-color: var(--white-background-color);
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+  }
+
+.background-image {
+    background-image: url(/images/coffee-background.jpg);
+    height: 800px;
+    width: 800px;
+}

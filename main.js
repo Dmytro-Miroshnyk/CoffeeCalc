@@ -1,4 +1,5 @@
-/*Ingridient Prices*/
+"use strict";
+// Ingridient Prices
 
 let coffeePrice = 630;
 const coffeePricePerGram = coffeePrice / 1000;
@@ -14,7 +15,7 @@ let waterPrice = 2;
 const waterPricePerGram = 2 / 1000;
 
 
-/* Supplies Prices*/
+// Supplies Prices
 let cupPricePerItem = 2.13;
 let cupLidPricePerItem = 1.70;
 let strawPrice = 100;
@@ -26,7 +27,7 @@ const sugarPricePerItem = sugarPrice / 200;
 
 const averageSupplieCostPerCup = (cupPricePerItem) + (cupLidPricePerItem) + (stickPricePerItem) + (sugarPricePerItem * 2);
 
-/*Drinks Self Cost*/
+// Drinks Self Cost
 
 const espressoSelfCost = (coffeePricePerGram * 9) + (waterPricePerGram * 50);
 const espressoMacchiatoSelfCost = (coffeePricePerGram * 9) + (waterPricePerGram * 50) + (milkPricePerGram * 6);
@@ -42,7 +43,7 @@ const latteToffeeSelfCost = (waterPricePerGram * 300) + (toffeePricePerGram * 30
 const latteScandiaSelfCost = (waterPricePerGram * 300) + (scandiaPricePerGram * 30);
 
 
-/* Vending Prices */
+// Vending Prices 
 
 let espressoVendingPrice = 25;
 let espressoMacchiatoVendingPrice = 30;
@@ -58,7 +59,7 @@ let latteToffeeVendingPrice = 40;
 let latteScandiaVendingPrice = 40;
 
 
-/* Drinks Profit */
+// Drinks Profit 
 
 const espressoProfit = espressoVendingPrice - espressoSelfCost;
 const espressoMacchiatoProfit = espressoMacchiatoVendingPrice - espressoMacchiatoSelfCost;
@@ -74,7 +75,7 @@ const latteToffeeProfit = latteToffeeVendingPrice - latteToffeeSelfCost;
 const latteScandiaProfit = latteScandiaVendingPrice - latteScandiaSelfCost;
 
 
-/* Drinks Profit including supplies*/
+// Drinks Profit including supplies
 
 const espressoProfitIncludingSupplies = espressoProfit - averageSupplieCostPerCup;
 const espressoMacchiatoProfitIncludingSupplies = espressoMacchiatoProfit - averageSupplieCostPerCup;
@@ -90,14 +91,14 @@ const latteToffeeProfitIncludingSupplies = latteToffeeProfit - averageSupplieCos
 const latteScandiaProfitIncludingSupplies = latteScandiaProfit - averageSupplieCostPerCup;
 
 
-/* Average Profit */
+// Average Profit 
 
 const averageVendingPrice = (espressoVendingPrice + espressoMacchiatoVendingPrice + americanoVendingPrice + americanoMilkVendingPrice + cappuccinoVendingPrice + latteVendingPrice + moccaVendingPrice + flatWhiteVendingPrice + chocolateVendingPrice + cacaoVendingPrice + latteToffeeVendingPrice + latteScandiaVendingPrice) / 12;
 const averageSelfCost = (espressoSelfCost + espressoMacchiatoSelfCost + americanoSelfCost + americanoMilkSelfCost + cappuccinoSelfCost + latteSelfCost + moccaSelfCost + flatWhiteSelfCost + chocolateSelfCost + cacaoSelfCost + latteToffeeSelfCost + latteScandiaSelfCost) / 12;
 const averageProfitIncludingSupplies = (espressoProfitIncludingSupplies + espressoMacchiatoProfitIncludingSupplies + americanoProfitIncludingSupplies + americanoMilkProfitIncludingSupplies + cappuccinoProfitIncludingSupplies + latteProfitIncludingSupplies + moccaProfitIncludingSupplies + flatWhiteProfitIncludingSupplies + chocolateProfitIncludingSupplies + cacaoProfitIncludingSupplies + latteToffeeProfitIncludingSupplies + latteScandiaProfitIncludingSupplies) / 12;
 
 
-/* Information Output */
+// Information Output 
 
 console.log (`Ціна еспресо ${espressoVendingPrice}, Собівартість еспресо ${espressoSelfCost.toFixed(2)}, Прибуток ${espressoProfitIncludingSupplies.toFixed(2)}`);
 console.log (`Ціна еспресо мак'ято ${espressoMacchiatoVendingPrice}, Собівартість еспресо мак'ято ${espressoMacchiatoSelfCost}, Прибуток ${espressoMacchiatoProfitIncludingSupplies.toFixed(2)}`);
@@ -114,7 +115,7 @@ console.log (`Ціна лате лісовий горіх ${latteScandiaVendingP
 console.log (`Cередня ціна ${averageVendingPrice}, Cередня собівартість ${averageSelfCost.toFixed(2)}, Cередній прибуток ${averageProfitIncludingSupplies.toFixed(2)}`);
 
 
-/*Expenses (витрати) */
+// Expenses (витрати)
 let rent = 1500;
 let singleTax = 1600;
 let esvTax = 1760;
@@ -129,9 +130,9 @@ const expensesPerMonth = rent + televend + wifiCost + taxesPerMonth;
 console.log (`Витрати на місяць ${expensesPerMonth}`);
 
 
-/*Calculation*/
+// Calculation
 
-const cupsPerMonthNeeded = expensesPerMonth / averageProfitIncludingSupplies;
-console.log (`Необхідна кількість чашок на місяць ${cupsPerMonthNeeded.toFixed(2)}`);
-const cupsPerDayNeeded = cupsPerMonthNeeded / 30;
-console.log(`Необхідна кількість чашок на день ${cupsPerDayNeeded.toFixed(2)}`);
+const cupsPerMonthNeeded = Number((expensesPerMonth / averageProfitIncludingSupplies).toFixed(2));
+console.log (`Необхідна кількість чашок на місяць ${cupsPerMonthNeeded}`);
+const cupsPerDayNeeded = Number((cupsPerMonthNeeded / 30).toFixed(2));
+console.log(`Необхідна кількість чашок на день ${cupsPerDayNeeded}`);
