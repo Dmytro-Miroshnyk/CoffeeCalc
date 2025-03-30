@@ -1,9 +1,9 @@
 "use strict";
 // Ingridient Prices
 
-let coffeePrice = 630;
+let coffeePrice = 680;
 const coffeePricePerGram = coffeePrice / 1000;
-let milkPrice = 440;
+let milkPrice = 316;
 const milkPricePerGram = milkPrice / 1000;
 let cacaoPrice = 330;
 const cacaoPricePerGram = cacaoPrice / 1000;
@@ -45,18 +45,18 @@ const latteScandiaSelfCost = (waterPricePerGram * 300) + (scandiaPricePerGram * 
 
 // Vending Prices 
 
-let espressoVendingPrice = 25;
-let espressoMacchiatoVendingPrice = 30;
-let americanoVendingPrice = 30;
-let americanoMilkVendingPrice = 35;
-let cappuccinoVendingPrice = 40;
-let latteVendingPrice = 40;
-let moccaVendingPrice = 40;
-let flatWhiteVendingPrice = 40;
-let chocolateVendingPrice = 35;
-let cacaoVendingPrice = 40;
-let latteToffeeVendingPrice = 40;
-let latteScandiaVendingPrice = 40;
+let espressoVendingPrice = 30;
+let espressoMacchiatoVendingPrice = 35;
+let americanoVendingPrice = 35;
+let americanoMilkVendingPrice = 40;
+let cappuccinoVendingPrice = 45;
+let latteVendingPrice = 45;
+let moccaVendingPrice = 45;
+let flatWhiteVendingPrice = 45;
+let chocolateVendingPrice = 40;
+let cacaoVendingPrice = 45;
+let latteToffeeVendingPrice = 45;
+let latteScandiaVendingPrice = 45;
 
 
 // Drinks Profit 
